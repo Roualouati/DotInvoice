@@ -22,7 +22,7 @@ async function getData(userId: string) {
       id: true,
       clientName: true,
       total: true,
-      createdAt: true,
+      date: true,
       status: true,
       invoiceNumber: true,
       currency: true,
@@ -75,7 +75,7 @@ export async function InvoiceList() {
                 <TableCell>
                   {new Intl.DateTimeFormat("en-US", {
                     dateStyle: "medium",
-                  }).format(invoice.createdAt)}
+                  }).format(invoice.date)}
                 </TableCell>
                 <TableCell className="text-right">
                   <InvoiceActions status={invoice.status} id={invoice.id} />
